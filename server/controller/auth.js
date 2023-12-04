@@ -49,11 +49,11 @@ const register=async(req,res)=>{
 });
 }
 
-const sendOtpVerification =(req,res)=>{
+const sendOtpVerification =async(req,res)=>{
     let otp=(Math.floor(1000 + Math.random() * 9000)).toString();
     // console.log(typeof(otp))
     // console.log(otp)
-
+    console.log(otp);
     const transporter = nodemailer.createTransport({
         service:'gmail',
         auth : {
